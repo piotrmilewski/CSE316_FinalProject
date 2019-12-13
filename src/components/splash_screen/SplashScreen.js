@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom';
 
 import { loginHandler } from '../../store/database/asynchHandler'
 
-class LoginScreen extends Component {
+class SplashScreen extends Component {
   state = {
     email: '',
     password: '',
@@ -63,8 +63,8 @@ class LoginScreen extends Component {
           </form>
 
           <div className="col s8 banner">
-            @todo<br />
-            List Maker
+            Wireframer™<br />
+            Wireframe Maker
           </div>
         </div>
       </div>
@@ -88,4 +88,4 @@ const mapDispatchToProps = dispatch => ({
 export default compose(
   firebaseConnect(),
   connect(mapStateToProps, mapDispatchToProps),
-)(LoginScreen);
+)(SplashScreen);
