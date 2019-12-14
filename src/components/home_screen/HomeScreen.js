@@ -26,7 +26,7 @@ class HomeScreen extends Component {
         }
 
         return (
-            <div className="dashboard container">
+            <div className="dashboard">
                 <div className="row">
                     <div className="col s5">
                         <WireframeLinks />

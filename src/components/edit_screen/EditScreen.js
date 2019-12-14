@@ -3,6 +3,8 @@ import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { firestoreConnect } from 'react-redux-firebase';
+import WireframeOptions from './WireframeOptions';
+import AddControl from './AddControl';
 
 class EditScreen extends Component {
 
@@ -17,8 +19,19 @@ class EditScreen extends Component {
             return <React.Fragment />;
 
         return (
-            <div className="container white">
-                
+            <div className="white">
+                <div className="row">
+                    <div className="col s2">
+                        <WireframeOptions />
+                        <AddControl />
+                    </div>
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
             </div>
         );
     }

@@ -44,7 +44,7 @@ class SplashScreen extends Component {
     }
 
     return (
-      <div className="container">
+      <div>
         <div className="row">
           <form onSubmit={this.handleSubmit} className="col s4 white">
             <h5 className="grey-text text-darken-3">Login</h5>
