@@ -5,6 +5,8 @@ import { compose } from 'redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import WireframeOptions from './WireframeOptions';
 import AddControl from './AddControl';
+import ControlChange from './ControlChange';
+import Controls from './Controls';
 
 class EditScreen extends Component {
 
@@ -20,16 +22,16 @@ class EditScreen extends Component {
 
         return (
             <div className="white">
-                <div className="row">
+                <div className="row" style={{border: '1px solid black'}}>
                     <div className="col s2">
                         <WireframeOptions />
                         <AddControl />
                     </div>
-                    <div>
-                        
+                    <div className="col s8">
+                        <Controls />
                     </div>
-                    <div>
-                        
+                    <div className="col s2">
+                        <ControlChange />
                     </div>
                 </div>
             </div>

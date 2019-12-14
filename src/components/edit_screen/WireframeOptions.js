@@ -9,7 +9,7 @@ class WireframeOptions extends React.Component {
 
     render() {
         return (
-            <div className="row" style={{border: '1px solid black', height: '50px'}}>
+            <div className="row" style={{border: '1px solid black', height: '50px', backgroundColor: '#F6F6F6', marginTop: '5px'}}>
                 <Link onClick={this.close} style={{color: 'black'}}>
                     <div className='col s2'>
                         <i class="material-icons" style={{fontSize: '40px', position: 'relative', top: '3px'}}>zoom_in</i>
