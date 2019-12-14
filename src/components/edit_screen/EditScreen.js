@@ -28,10 +28,10 @@ class EditScreen extends Component {
                         <AddControl />
                     </div>
                     <div className="col s8">
-                        <Controls />
+                        <Controls id={wireframe.id}/>
                     </div>
                     <div className="col s2">
-                        <ControlChange />
+                        <ControlChange id={wireframe.id}/>
                     </div>
                 </div>
             </div>
