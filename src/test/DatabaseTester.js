@@ -26,7 +26,8 @@ class DatabaseTester extends React.Component {
                     owner: wireframeJson.owner,
                     width: wireframeJson.width,
                     height: wireframeJson.height,
-                    controls: wireframeJson.controls
+                    controls: wireframeJson.controls,
+                    lastUpdated: fireStore.FieldValue.serverTimestamp(),
                 }).then(() => {
                     console.log("DATABASE RESET");
                 }).catch((err) => {

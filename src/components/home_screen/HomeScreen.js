@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import { NavLink, Redirect } from 'react-router-dom';
+import { /*NavLink,*/ Redirect } from 'react-router-dom';
 import { firestoreConnect } from 'react-redux-firebase';
-import TodoListLinks from './TodoListLinks'
+import WireframeLinks from './WireframeLinks'
+import { getFirestore } from 'redux-firestore'
 
 class HomeScreen extends Component {
+
+    handleNewWireframe = (e) => {
+        const fireStore = getFirestore();
+        fireStore.collection('wireframes').add({
+            name: "Undefined",
+            owner: "Undefined",
+            width: 500,
+            height: 600,
+            controls: null,
+            lastUpdated: fireStore.FieldValue.serverTimestamp(),
+        })
+    }
 
     render() {
         if (!this.props.auth.uid) {
@@ -15,19 +28,19 @@ class HomeScreen extends Component {
         return (
             <div className="dashboard container">
                 <div className="row">
-                    <div className="col s12 m4">
-                        <TodoListLinks />
+                    <div className="col s5">
+                        <WireframeLinks />
                     </div>
 
-                    <div className="col s8">
+                    <div className="col s7">
                         <div className="banner">
-                            @todo<br />
-                            List Maker
+                        Wireframer™<br />
+                        Wireframe Maker
                         </div>
                         
                         <div className="home_new_list_container">
-                                <button className="home_new_list_button" onClick={this.handleNewList}>
-                                    Create a New To Do List
+                                <button className="home_new_list_button" onClick={this.handleNewWireframe}>
+                                    Create a New Wireframe
                                 </button>
                         </div>
                     </div>
@@ -46,6 +59,6 @@ const mapStateToProps = (state) => {
 export default compose(
     connect(mapStateToProps),
     firestoreConnect([
-      { collection: 'todoLists' },
+      { collection: 'wireframes', orderBy: ['lastUpdated', 'desc'] },
     ]),
 )(HomeScreen);
