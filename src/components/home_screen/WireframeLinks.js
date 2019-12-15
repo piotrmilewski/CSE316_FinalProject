@@ -40,9 +40,9 @@ class WireframeLinks extends React.Component {
                         </div>
                         <div className="card-title col s1">
                             <Modal header="Delete list?" trigger={<Button style={{position: 'relative', top: 30}}><Icon className="material-icons">delete</Icon></Button>}>
-                                <p><b>Are your sure you want to delete this list?</b></p>
+                                <p><b>Are your sure you want to delete this wireframe?</b></p>
                                 <Button onClick={this.deleteList.bind(this, wireframe.id)}>Yes</Button>
-                                <p>The list will not be retreivable.</p>
+                                <p>The wireframe will not be retreivable.</p>
                             </Modal>
                         </div>
                     </div>
