@@ -17,6 +17,47 @@ class Control extends React.Component {
         key: -1,
     };
 
+    componentDidMount() {
+        document.addEventListener("keydown", this.onKeyPressed.bind(this));
+    }
+  
+    componentWillUnmount() {
+        document.removeEventListener("keydown", this.onKeyPressed.bind(this));
+    }
+
+    onKeyPressed = (e) => {
+        if (e.key === 'd' && e.ctrlKey && this.state.editable){
+            e.preventDefault();
+            var controls = this.props.wireframe.controls;
+            var control;
+            controls.map(controlM => {
+                if (controlM.key === this.props.control.key){
+                    control = controlM;
+                }
+                return controlM;
+            });
+            var controlCopy = {
+                "key": new Date().getTime(),
+                "controlName": control.controlName,
+                "name": control.name,
+                "xCoordinate": control.xCoordinate+100,
+                "yCoordinate": control.yCoordinate+100,
+                "width": control.width,
+                "height": control.height,
+                "backgroundColor": control.backgroundColor,
+                "borderColor": control.borderColor,
+                "borderThickness": control.borderThickness,
+                "borderRadius": control.borderRadius,
+                "fontSize": control.fontSize,
+                "textColor": control.textColor,
+                "edit": false
+            }
+            controls.push(controlCopy);
+            getFirestore().collection('wireframes').doc(this.props.id).update({"saved": false});
+            getFirestore().collection('wireframes').doc(this.props.id).update({"controls": controls});
+        }
+    }
+
     setEdit = (e) => {
         e.stopPropagation();
         var controls = this.props.wireframe.controls;
@@ -70,6 +111,8 @@ class Control extends React.Component {
             }
             return controlM;
         });
+        if (control == null)
+            return <div></div>
         
         if (this.state.width === -1){
             this.setState({width: control.width});

@@ -12,7 +12,7 @@ class HomeScreen extends Component {
         const fireStore = getFirestore();
         fireStore.collection('wireframes').add({
             name: "Undefined",
-            owner: "Undefined",
+            owner: this.props.auth.email,
             width: 500,
             height: 600,
             controls: null,

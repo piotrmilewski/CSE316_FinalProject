@@ -31,7 +31,7 @@ class WireframeLinks extends React.Component {
         const wireframes = this.props.wireframes;
         return (
             <div className="todo-lists section">
-                {wireframes && wireframes.map(wireframe => (
+                {wireframes && wireframes.map(wireframe => ( this.props.auth.email === wireframe.owner ?
                     <div className="row">
                          <div className="card-title col s10">
                             <Link to={'/wireframe/' + wireframe.id} key={wireframe.id} onClick={this.updateAccessTime.bind(this, wireframe.id)}>
@@ -46,7 +46,7 @@ class WireframeLinks extends React.Component {
                             </Modal>
                         </div>
                     </div>
-                ))}
+                : <div></div>))}
             </div>
         );
     }

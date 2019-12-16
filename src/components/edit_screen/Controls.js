@@ -10,7 +10,23 @@ class Controls extends React.Component {
     state = {
         wireframe: null,
         controls: null,
+        changed: 0,
     };
+
+    componentDidMount() {
+        document.addEventListener("keydown", this.onKeyPressed.bind(this));
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener("keydown", this.onKeyPressed.bind(this));
+    }
+
+    onKeyPressed = (e) => {
+      if (e.key === 'd' && e.ctrlKey){
+        e.preventDefault();
+        this.setState({controls: this.props.wireframe.controls});
+      }
+    }
 
     handleClick = () => {
         var controls = this.props.wireframe.controls;
@@ -24,7 +40,7 @@ class Controls extends React.Component {
     }
 
     render() {
-        if (this.state.wireframe == null){
+        if (this.state.wireframe == null || this.state.controls == null){
             this.setState({wireframe: this.props.wireframe});
             this.setState({controls: this.props.wireframe.controls});
         }
