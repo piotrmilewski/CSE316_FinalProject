@@ -81,6 +81,8 @@ class Control extends React.Component {
         }
 
         var fontSize = control.fontSize + 'px';
+        var borderRadius = control.borderRadius + 'px';
+        var borderThickness = control.borderThickness + 'px';
 
         if (control.controlName === "Container"){
             return (
@@ -104,7 +106,8 @@ class Control extends React.Component {
                         });
                         this.updateResize(ref.style.width, ref.style.height);
                     }}>
-                    <div style={{border: '1px solid black', height: '100%', width: '100%', backgroundColor: 'white'}}></div>
+                    <div style={{border: '1px solid black', borderRadius: borderRadius, backgroundColor: control.backgroundColor, borderWidth: borderThickness,
+                                borderColor: control.borderColor, height: '100%', width: '100%'}}></div>
                 </Rnd>
             );
         }
@@ -130,7 +133,7 @@ class Control extends React.Component {
                         });
                         this.updateResize(ref.style.width, ref.style.height);
                     }}>
-                <div style={{fontSize: fontSize, height: '100%', width: '100%'}}>{control.name}</div>
+                <div style={{fontSize: fontSize, backgroundColor: control.backgroundColor, height: '100%', width: '100%'}}>{control.name}</div>
                 </Rnd>
             );
         }
@@ -156,7 +159,8 @@ class Control extends React.Component {
                         });
                         this.updateResize(ref.style.width, ref.style.height);
                     }}>
-                <button style={{fontSize: fontSize, height: '100%', width: '100%', pointerEvents: 'none'}}>{control.name}</button>
+                <button style={{backgroundColor: control.backgroundColor, borderWidth: borderThickness, borderRadius: borderRadius, borderColor: control.borderColor, 
+                                fontSize: fontSize, height: '100%', width: '100%', pointerEvents: 'none'}}>{control.name}</button>
                 </Rnd>
             );
         }
@@ -182,7 +186,8 @@ class Control extends React.Component {
                         });
                         this.updateResize(ref.style.width, ref.style.height);
                     }}>
-                <input style={{all: 'revert', fontSize: fontSize, pointerEvents: 'none', color: 'gray', width: '100%', height: '100%'}} value={control.name}></input>
+                <input style={{all: 'revert', backgroundColor: control.backgroundColor, borderWidth: borderThickness, borderRadius: borderRadius, borderColor: control.borderColor, 
+                                fontSize: fontSize, pointerEvents: 'none', color: 'gray', width: '100%', height: '100%'}} value={control.name}></input>
                 </Rnd>
             );
         }

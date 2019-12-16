@@ -38,11 +38,22 @@ class DatabaseTester extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-                <button onClick={this.handleClear}>Clear Database</button>
-                <button onClick={this.handleReset}>Reset Database</button>
-            </div>)
+
+        //admin password = administrator
+        if (this.props.auth.email === "admin@gmail.com"){
+            return (
+                <div>
+                    <button onClick={this.handleClear}>Clear Database</button>
+                    <button onClick={this.handleReset}>Reset Database</button>
+                </div>);
+        }
+        else{
+            return (
+                <div>
+                    You don't have admin access
+                </div>
+            );
+        }
     }
 }
 
