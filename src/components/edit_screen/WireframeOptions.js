@@ -51,6 +51,14 @@ class WireframeOptions extends React.Component {
         this.setState({goHome: true});
     }
 
+    zoomIn = () => {
+
+    }
+
+    zoomOut = () => {
+
+    }
+
     render() {
 
         if (this.state.goHome){
@@ -70,12 +78,12 @@ class WireframeOptions extends React.Component {
                     <div style={{display: 'inline-block', width: '10px'}}></div>
                     <Button onClick={this.closeAnyway}>No</Button>
                 </Modal>
-                <Link onClick={this.close} style={{color: 'black'}}>
+                <Link onClick={this.zoomIn} style={{color: 'black'}}>
                     <div className='col s2'>
                         <i class="material-icons" style={{fontSize: '40px', position: 'relative', top: '3px'}}>zoom_in</i>
                     </div>
                 </Link>
-                <Link onClick={this.close} style={{color: 'black'}}>
+                <Link onClick={this.zoomOut} style={{color: 'black'}}>
                     <div className='col s3'>
                         <i class="material-icons" style={{fontSize: '40px', position: 'relative', top: '3px'}}>zoom_out</i>
                     </div>
