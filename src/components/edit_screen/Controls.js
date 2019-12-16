@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import Control from './Control'
+import { getFirestore } from 'redux-firestore';
 
 class Controls extends React.Component {
 
@@ -11,21 +12,30 @@ class Controls extends React.Component {
         controls: null,
     };
 
+    handleClick = () => {
+        var controls = this.props.wireframe.controls;
+        var newControls = controls.map(control => {
+            if (control.edit === true){
+                control.edit = false;
+            }
+            return control;
+        });
+        getFirestore().collection('wireframes').doc(this.props.id).update({"controls": newControls});
+    }
+
     render() {
         if (this.state.wireframe == null){
             this.setState({wireframe: this.props.wireframe});
             this.setState({controls: this.props.wireframe.controls});
         }
-        console.log(this.state.controls);
         var height = this.props.wireframe.height + 'px';
         var width = this.props.wireframe.width + 'px';
         var controls = this.state.controls;
         return (
-            <div style={{border: '1px solid black', height: height, width: width, backgroundColor: '#F6F6F6', marginTop: '5px', marginLeft: '5px', marginRight: '5px'}}>
+            <div onClick={this.handleClick} style={{border: '1px solid black', height: height, width: width, backgroundColor: '#F6F6F6', marginTop: '5px', marginLeft: '5px', marginRight: '5px'}}>
                 {controls && controls.map(control => (
-                    <Control control={control} />
+                    <Control control={control} id={this.props.id}/>
                 ))}
-
             </div>
         );
     }

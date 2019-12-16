@@ -5,6 +5,7 @@
             "name": "Sample Wireframe",
             "owner": "Richard McKenna",
             "width": 600,
+            "saved": true,
             "height": 700,
             "controls": [
                 {
@@ -19,7 +20,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 0,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 1,
@@ -34,8 +36,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
-
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 2,
@@ -50,7 +52,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 3,
@@ -65,7 +68,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 4,
@@ -80,7 +84,8 @@
                     "borderThickness": 2,
                     "borderRadius": 2,
                     "fontSize": 14,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 }
             ]
         },
@@ -89,6 +94,7 @@
             "name": "McKenna's Register Page",
             "owner": "Richard McKenna",
             "width": 600,
+            "saved": true,
             "height": 700,
             "controls": [
                 {
@@ -103,7 +109,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 0,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 1,
@@ -118,7 +125,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
 
                 },
                 {
@@ -134,7 +142,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
 
                 },
                 {
@@ -150,7 +159,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 4,
@@ -165,8 +175,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
-
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 5,
@@ -181,7 +191,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 6,
@@ -196,8 +207,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
-
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 7,
@@ -212,7 +223,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 8,
@@ -227,7 +239,8 @@
                     "borderThickness": 2,
                     "borderRadius": 2,
                     "fontSize": 14,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 }
             ]
         },
@@ -236,6 +249,7 @@
             "name": "Piotr's Register Page",
             "owner": "Piotr Milewski",
             "width": 300,
+            "saved": true,
             "height": 500,
             "controls": [
                 {
@@ -250,7 +264,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 0,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 1,
@@ -265,8 +280,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 14,
-                    "textColor": 16761035
-
+                    "textColor": 16761035,
+                    "edit": false
                 },
                 {
                     "key": 2,
@@ -281,8 +296,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 14,
-                    "textColor": 16761035
-
+                    "textColor": 16761035,
+                    "edit": false
                 },
                 {
                     "key": 3,
@@ -297,7 +312,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 4,
@@ -312,8 +328,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 14,
-                    "textColor": 16761035
-
+                    "textColor": 16761035,
+                    "edit": false
                 },
                 {
                     "key": 5,
@@ -328,7 +344,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 6,
@@ -343,8 +360,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 14,
-                    "textColor": 16761035
-
+                    "textColor": 16761035,
+                    "edit": false
                 },
                 {
                     "key": 7,
@@ -359,7 +376,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 8,
@@ -374,8 +392,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 14,
-                    "textColor": 16761035
-
+                    "textColor": 16761035,
+                    "edit": false
                 },
                 {
                     "key": 9,
@@ -390,7 +408,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 10,
@@ -405,8 +424,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 14,
-                    "textColor": 16761035
-
+                    "textColor": 16761035,
+                    "edit": false
                 },
                 {
                     "key": 11,
@@ -421,7 +440,8 @@
                     "borderThickness": 2,
                     "borderRadius": 0,
                     "fontSize": 12,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 },
                 {
                     "key": 12,
@@ -436,7 +456,8 @@
                     "borderThickness": 2,
                     "borderRadius": 2,
                     "fontSize": 14,
-                    "textColor": 0
+                    "textColor": 0,
+                    "edit": false
                 }
             ]
         }

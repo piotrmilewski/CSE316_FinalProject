@@ -25,6 +25,7 @@ class DatabaseTester extends React.Component {
                     name: wireframeJson.name,
                     owner: wireframeJson.owner,
                     width: wireframeJson.width,
+                    saved: wireframeJson.saved,
                     height: wireframeJson.height,
                     controls: wireframeJson.controls,
                     lastUpdated: fireStore.FieldValue.serverTimestamp(),

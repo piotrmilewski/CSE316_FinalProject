@@ -22,10 +22,10 @@ class EditScreen extends Component {
 
         return (
             <div className="white">
-                <div className="row" style={{border: '1px solid black'}}>
+                <div className="row" style={{cursor: 'default', border: '1px solid black'}}>
                     <div className="col s2">
-                        <WireframeOptions />
-                        <AddControl />
+                        <WireframeOptions id={wireframe.id}/>
+                        <AddControl id={wireframe.id}/>
                     </div>
                     <div className="col s8">
                         <Controls id={wireframe.id}/>
